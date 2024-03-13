@@ -1,6 +1,6 @@
 #$ delay 50
 
-asciinema rec temp_test.cast \
+asciinema rec demos/temp_test.cast \
     --overwrite \
     -c 'env -i PS1=$ bash --noprofile --norc' \
     -q
@@ -14,6 +14,6 @@ echo "Hello World"
 
 #$ expect \$
 
-asciinema play temp_test.cast
+asciinema play demos/temp_test.cast
 #$ expect exit
 #$ expect \$

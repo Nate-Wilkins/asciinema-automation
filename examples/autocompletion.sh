@@ -1,6 +1,6 @@
 #$ delay 50
 
-mkdir my_folder_with_a_very_long_name
+mkdir -p my_folder_with_a_very_long_name
 #$ expect \$
 
 #$ delay 150

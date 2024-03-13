@@ -1,9 +1,13 @@
+[tool.setuptools.packages.find]
+include = ["asciinema_automation"]
+namespaces = false
+
 [project]
 name = "asciinema-automation"
 version = "0.2.0"
 authors = [{ name = "Pierre Marchand", email = "test@test.com" }]
-description = "CLI utility to automate asciinema"
-readme = { file = "README.rst", content-type = "text/x-rst" }
+description = "Automate `asciinema` recordings."
+readme = "README.md"
 requires-python = ">=3.7"
 license = { text = "MIT License" }
 classifiers = [
@@ -13,14 +17,13 @@ classifiers = [
   "Operating System :: Unix",
 ]
 keywords = ["asciinema"]
-dependencies = ["pexpect>=4.8.0", "asciinema>=2.2.0"]
 
 [project.optional-dependencies]
 dev = ["ruff", "pytest", "mypy", "types-pexpect"]
 
 [project.urls]
-"Homepage" = "https://github.com/PierreMarchand20/asciinema_automation"
-"Bug Tracker" = "https://github.com/PierreMarchand20/asciinema_automation/issues"
+"Homepage" = "https://github.com/Nate-Wilkins/asciinema-automation"
+"Bug Tracker" = "https://github.com/Nate-Wilkins/asciinema-automation/issues"
 
 [project.scripts]
 asciinema-automation = "asciinema_automation.cli:cli"
@@ -47,3 +50,4 @@ unfixable = []
 [tool.mypy]
 python_version = "3.12"
 strict = true
+

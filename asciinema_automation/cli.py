@@ -37,7 +37,7 @@ def cli(argv: Optional[List[str]] = None) -> None:
         "--standard-deviation",
         type=int,
         default=60,
-        help="""standard deviation for gaussian used to 
+        help="""standard deviation for gaussian used to
         generate time between key strokes""",
     )
     parser.add_argument(
@@ -46,26 +46,6 @@ def cli(argv: Optional[List[str]] = None) -> None:
         type=int,
         default=30,
         help="timeout for a command output to come through",
-    )
-    group = parser.add_mutually_exclusive_group()
-    group.add_argument(
-        "-d",
-        "--debug",
-        help="""set loglevel to DEBUG 
-        and output to 'outputfile.log'. Default loglevel to ERROR.""",
-        action="store_const",
-        dest="loglevel",
-        const=logging.DEBUG,
-        default=logging.ERROR,
-    )
-    group.add_argument(
-        "-v",
-        "--verbose",
-        help="""set loglevel to INFO and output to 'outputfile.log'. 
-        Default loglevel to ERROR.""",
-        action="store_const",
-        dest="loglevel",
-        const=logging.INFO,
     )
 
     # Command line inputs
@@ -76,14 +56,10 @@ def cli(argv: Optional[List[str]] = None) -> None:
     wait = args.wait
     asciinema_arguments = args.asciinema_arguments
     standard_deviation = args.standard_deviation
-    loglevel = args.loglevel
     timeout = args.timeout
 
     # Setup logger
-    logfile = None
-    if loglevel < logging.ERROR:
-        logfile = outputfile.with_suffix(".log")
-    logging.basicConfig(filename=logfile, level=loglevel)
+    logging.basicConfig(level=logging.DEBUG)
 
     # Script
     script = Script(

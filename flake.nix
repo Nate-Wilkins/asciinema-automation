@@ -6,15 +6,15 @@
 
     flake-utils.url                                 = "github:numtide/flake-utils";
 
-    task-runner.url                                 = "gitlab:ox_os/task-runner";
-    task-documentation.url                          = "gitlab:ox_os/task-documentation";
+    # task-runner.url                                 = "gitlab:ox_os/task-runner";
+    # task-documentation.url                          = "gitlab:ox_os/task-documentation";
   };
 
   outputs                                           = {
     nixpkgs,
     flake-utils,
-    task-runner,
-    task-documentation,
+    # task-runner,
+    # task-documentation,
     ...
   }@inputs:
     let
@@ -27,7 +27,7 @@
             //
             # Custom Packages.
             {
-              task-documentation                    = task-documentation.defaultPackage."${system}";
+              # task-documentation                    = task-documentation.defaultPackage."${system}";
             }
           );
 

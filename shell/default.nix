@@ -1,9 +1,5 @@
-{ mkPkgs, flake-inputs, system, ... }: (
+{ pkgs, taskRunner, ... }: (
   let
-    pkgs                                                        = mkPkgs system flake-inputs.nixpkgs;
-    taskRunner                                                  =
-      flake-inputs.task-runner.taskRunner.${system};
-
     #
     # Run help.
     #

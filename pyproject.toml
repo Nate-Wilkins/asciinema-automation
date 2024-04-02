@@ -4,7 +4,7 @@ namespaces = false
 
 [project]
 name = "asciinema-automation"
-version = "0.2.0"
+version = "1.0.1"
 authors = [{ name = "Pierre Marchand", email = "test@test.com" }]
 description = "Automate `asciinema` recordings."
 readme = "README.md"

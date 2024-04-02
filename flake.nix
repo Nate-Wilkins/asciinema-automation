@@ -1,17 +1,20 @@
 {
-  description                                       = "asciinema-automation";
+  description                                        = "asciinema-automation";
 
-  inputs                                            = {
-    nixpkgs.url                                     = "github:NixOS/nixpkgs/23.11";
+  inputs                                             = {
+    nixpkgs.url                                      = "github:NixOS/nixpkgs/23.11";
 
-    flake-utils.url                                 = "github:numtide/flake-utils";
-    flake-utils.inputs.nixpkgs.follows              = "nixpkgs";
+    systems.url                                      = "path:./flake.systems.nix";
+    systems.flake                                    = false;
+
+    flake-utils.url                                  = "github:numtide/flake-utils";
+    flake-utils.inputs.systems.follows               = "systems";
 
     # task-runner.url                                 = "gitlab:ox_os/task-runner";
     # task-documentation.url                          = "gitlab:ox_os/task-documentation";
   };
 
-  outputs                                           = {
+  outputs                                            = {
     nixpkgs,
     flake-utils,
     # task-runner,
@@ -19,8 +22,7 @@
     ...
   }@inputs:
     let
-      systems                                       = [ "x86_64-linux" ];
-      mkPkgs                                        =
+      mkPkgs                                         =
         system:
           pkgs: (
             # NixPkgs
@@ -33,33 +35,33 @@
           );
 
     in (
-      flake-utils.lib.eachSystem systems (system: (
+      flake-utils.lib.eachDefaultSystem (system: (
         let
-          pkgs                                      = mkPkgs system nixpkgs;
-          manifest                                  = (pkgs.lib.importTOML ./pyproject.toml).project;
-          environment                               = {
+          pkgs                                       = mkPkgs system nixpkgs;
+          manifest                                   = (pkgs.lib.importTOML ./pyproject.toml).project;
+          environment                                = {
             inherit pkgs;
             inherit manifest;
           };
-          name                                      = manifest.name;
+          name                                       = manifest.name;
         in rec {
-          packages.${name}                          = pkgs.callPackage ./default.nix environment;
-          legacyPackages                            = packages;
+          packages.${name}                           = pkgs.callPackage ./default.nix environment;
+          legacyPackages                             = packages;
 
           # `nix build`
-          defaultPackage                            = packages.${name};
+          defaultPackage                             = packages.${name};
 
           # `nix run`
-          apps.${name}                              = flake-utils.lib.mkApp {
+          apps.${name}                               = flake-utils.lib.mkApp {
             inherit name;
-            drv                                     = packages.${name};
+            drv                                      = packages.${name};
           };
-          defaultApp                                = apps.${name};
+          defaultApp                                 = apps.${name};
 
           # `nix develop`
-          devShells.default                         = import ./shell/default.nix {
+          devShells.default                          = import ./shell/default.nix {
             inherit mkPkgs system environment;
-            flake-inputs                            = inputs;
+            flake-inputs                             = inputs;
           };
         }
       )

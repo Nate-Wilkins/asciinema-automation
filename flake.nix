@@ -5,6 +5,7 @@
     nixpkgs.url                                     = "github:NixOS/nixpkgs/23.11";
 
     flake-utils.url                                 = "github:numtide/flake-utils";
+    flake-utils.inputs.nixpkgs.follows              = "nixpkgs";
 
     # task-runner.url                                 = "gitlab:ox_os/task-runner";
     # task-documentation.url                          = "gitlab:ox_os/task-documentation";

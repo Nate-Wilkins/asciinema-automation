@@ -1,5 +1,5 @@
 name               = "asciinema-automation"
 description        = "Automate `asciinema` recordings."
-version            = "0.2.0"
+version            = "1.0.0"
 authors            = ["Nate-Wilkins <nate-wilkins@code-null.com", "Pierre Marchand"]
 license            = "MIT"

@@ -6,14 +6,14 @@
   let
     name                                          = manifest.name;
     version                                       = manifest.version;
-    package                                       = pkgs.python39Packages.buildPythonPackage rec {
+    package                                       = pkgs.python310Packages.buildPythonPackage rec {
       inherit name version;
       src                                         = lib.cleanSource ./.;
       pyproject                                   = true;
       nativeBuildInputs                           = [ buildInputs ];
-      buildInputs                                 = with pkgs; [ python39Packages.setuptools python39Packages.wheel ];
+      buildInputs                                 = with pkgs; [ python310Packages.setuptools python310Packages.wheel ];
     };
-    pythonEnvironment                             = pkgs.python39.withPackages(pkgsPython: [
+    pythonEnvironment                             = pkgs.python310.withPackages(pkgsPython: [
       package
       pkgsPython.pexpect
     ]);

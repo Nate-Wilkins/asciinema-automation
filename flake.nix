@@ -5,21 +5,10 @@
     systems.url                                               = "path:./flake.systems.nix";
     systems.flake                                             = false;
 
-    nixpkgs.url                                               = "github:NixOS/nixpkgs/23.11";
+    nixpkgs.url                                               = "github:Nate-Wilkins/nixpkgs/nixos-unstable";
 
     flake-utils.url                                           = "github:numtide/flake-utils";
     flake-utils.inputs.systems.follows                        = "systems";
-
-    gitignore.url                                             = "github:hercules-ci/gitignore.nix";
-    gitignore.inputs.nixpkgs.follows                          = "nixpkgs";
-
-    fenix.url                                                 = "github:nix-community/fenix";
-    fenix.inputs.nixpkgs.follows                              = "nixpkgs";
-
-    asciinema-automation.url                                  = "github:Nate-Wilkins/asciinema-automation/1.0.1";
-    asciinema-automation.inputs.systems.follows               = "systems";
-    asciinema-automation.inputs.nixpkgs.follows               = "nixpkgs";
-    asciinema-automation.inputs.flake-utils.follows           = "flake-utils";
 
     jikyuu.url                                                = "github:Nate-Wilkins/jikyuu/1.0.1";
     jikyuu.inputs.systems.follows                             = "systems";
@@ -33,7 +22,7 @@
     task-documentation.inputs.flake-utils.follows             = "flake-utils";
     task-documentation.inputs.gitignore.follows               = "gitignore";
     task-documentation.inputs.fenix.follows                   = "fenix";
-    task-documentation.inputs.asciinema-automation.follows    = "asciinema-automation";
+    task-documentation.inputs.asciinema-automation.follows    = "";
     task-documentation.inputs.jikyuu.follows                  = "jikyuu";
 
     task-runner.url                                           = "gitlab:ox_os/task-runner/1.0.0";
@@ -42,9 +31,18 @@
     task-runner.inputs.flake-utils.follows                    = "flake-utils";
     task-runner.inputs.gitignore.follows                      = "gitignore";
     task-runner.inputs.fenix.follows                          = "fenix";
-    task-runner.inputs.asciinema-automation.follows           = "asciinema-automation";
+    task-runner.inputs.asciinema-automation.follows           = "";
     task-runner.inputs.jikyuu.follows                         = "jikyuu";
     task-runner.inputs.task-documentation.follows             = "task-documentation";
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Transatives
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+    gitignore.url                                             = "github:hercules-ci/gitignore.nix";
+    gitignore.inputs.nixpkgs.follows                          = "nixpkgs";
+
+    fenix.url                                                 = "github:nix-community/fenix";
+    fenix.inputs.nixpkgs.follows                              = "nixpkgs";
   };
 
   outputs                                            = {

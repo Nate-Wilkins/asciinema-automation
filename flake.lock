@@ -1,32 +1,5 @@
 {
   "nodes": {
-    "asciinema-automation": {
-      "inputs": {
-        "flake-utils": [
-          "flake-utils"
-        ],
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "systems": [
-          "systems"
-        ]
-      },
-      "locked": {
-        "lastModified": 1712042312,
-        "narHash": "sha256-1qpWprz04Zmn29ambQuw9dgzxxgX044YOec0Q5JIVxM=",
-        "owner": "Nate-Wilkins",
-        "repo": "asciinema-automation",
-        "rev": "edcd2877306a3db873d9192b9dbb5117ebc7dc0c",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Nate-Wilkins",
-        "ref": "1.0.1",
-        "repo": "asciinema-automation",
-        "type": "github"
-      }
-    },
     "fenix": {
       "inputs": {
         "nixpkgs": [
@@ -35,11 +8,11 @@
         "rust-analyzer-src": "rust-analyzer-src"
       },
       "locked": {
-        "lastModified": 1712038998,
-        "narHash": "sha256-bVIEz07/SLxPRRo+1G0cUd26KhoCj8yQc8myhf/93FM=",
+        "lastModified": 1768632427,
+        "narHash": "sha256-Y6kP10exkn5UiK9ead2Gky8TFsFZSsyT4f69DMKm0Wo=",
         "owner": "nix-community",
         "repo": "fenix",
-        "rev": "b1b59b4d908d3e64a7e923a7b434e94e03626ec0",
+        "rev": "edd560269f0d9ad75bd3da292ce4d9d27efdd22a",
         "type": "github"
       },
       "original": {
@@ -55,11 +28,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1710146030,
-        "narHash": "sha256-SZ5L6eA7HJ/nmkzGG7/ISclqe6oZdOZTNoesiInkXPQ=",
+        "lastModified": 1731533236,
+        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "b1d9ab70662946ef0850d488da1c9019f3a9752a",
+        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
         "type": "github"
       },
       "original": {
@@ -75,11 +48,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1709087332,
-        "narHash": "sha256-HG2cCnktfHsKV0s4XW83gU3F57gaTljL9KNSuG6bnQs=",
+        "lastModified": 1762808025,
+        "narHash": "sha256-XmjITeZNMTQXGhhww6ed/Wacy2KzD6svioyCX7pkUu4=",
         "owner": "hercules-ci",
         "repo": "gitignore.nix",
-        "rev": "637db329424fd7e46cf4185293b9cc8c88c95394",
+        "rev": "cb5e3fdca1de58ccbc3ef53de65bd372b48f567c",
         "type": "github"
       },
       "original": {
@@ -120,23 +93,22 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1701282334,
-        "narHash": "sha256-MxCVrXY6v4QmfTwIysjjaX0XUhqBbxTWWB4HXtDYsdk=",
-        "owner": "NixOS",
+        "lastModified": 1768305791,
+        "narHash": "sha256-AIdl6WAn9aymeaH/NvBj0H9qM+XuAuYbGMZaP0zcXAQ=",
+        "owner": "Nate-Wilkins",
         "repo": "nixpkgs",
-        "rev": "057f9aecfb71c4437d2b27d3323df7f93c010b7e",
+        "rev": "1412caf7bf9e660f2f962917c14b1ea1c3bc695e",
         "type": "github"
       },
       "original": {
-        "owner": "NixOS",
-        "ref": "23.11",
+        "owner": "Nate-Wilkins",
+        "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
     },
     "root": {
       "inputs": {
-        "asciinema-automation": "asciinema-automation",
         "fenix": "fenix",
         "flake-utils": "flake-utils",
         "gitignore": "gitignore",
@@ -150,11 +122,11 @@
     "rust-analyzer-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1712001933,
-        "narHash": "sha256-O8Xnw/qvo827npopZeyDrp4/WrYGm7QQg0Dz/HgheL0=",
+        "lastModified": 1768468158,
+        "narHash": "sha256-DfifO/Se9ogmp5rxe/OwmRIz20/w6BsbWC1s4kL1Bzc=",
         "owner": "rust-lang",
         "repo": "rust-analyzer",
-        "rev": "23dd54b010ec0013438e097b17fe2fd47628fb28",
+        "rev": "adbff8baedae53f9955fe60c0d470ecd77b4f548",
         "type": "github"
       },
       "original": {
@@ -167,21 +139,18 @@
     "systems": {
       "flake": false,
       "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-yJg569/Wc8hgG64XgA72/nLsZthk+InI5N+Hhmcc+kA=",
         "path": "./flake.systems.nix",
         "type": "path"
       },
       "original": {
         "path": "./flake.systems.nix",
         "type": "path"
-      }
+      },
+      "parent": []
     },
     "task-documentation": {
       "inputs": {
-        "asciinema-automation": [
-          "asciinema-automation"
-        ],
+        "asciinema-automation": [],
         "fenix": [
           "fenix"
         ],
@@ -218,9 +187,7 @@
     },
     "task-runner": {
       "inputs": {
-        "asciinema-automation": [
-          "asciinema-automation"
-        ],
+        "asciinema-automation": [],
         "fenix": [
           "fenix"
         ],

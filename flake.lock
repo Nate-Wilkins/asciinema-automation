@@ -45,6 +45,7 @@
     },
     "jikyuu": {
       "inputs": {
+        "asciinema-automation": [],
         "fenix": [
           "fenix"
         ],
@@ -54,21 +55,24 @@
         "nixpkgs": [
           "nixpkgs"
         ],
+        "rust-analyzer-src": [
+          "rust-analyzer-src"
+        ],
         "systems": [
           "systems"
         ]
       },
       "locked": {
-        "lastModified": 1712042482,
-        "narHash": "sha256-hiydnAm6cSsHijDDif9gnd6UZY9jRIosNXjNELjf3e0=",
+        "lastModified": 1768702742,
+        "narHash": "sha256-7/IJLuWAJ4Q7Jkz+mZoTEtmisXpIMr8+wb1jCnWE4lo=",
         "owner": "Nate-Wilkins",
         "repo": "jikyuu",
-        "rev": "e5e0d41fc5bbefe85312f2e5692da56e6474fd1c",
+        "rev": "041ed1ddcb823785e374f7717a1524ba7900473f",
         "type": "github"
       },
       "original": {
         "owner": "Nate-Wilkins",
-        "ref": "1.0.1",
+        "ref": "2.0.4",
         "repo": "jikyuu",
         "type": "github"
       }

@@ -46,7 +46,7 @@
     fenix.inputs.nixpkgs.follows                              = "nixpkgs";
     fenix.inputs.rust-analyzer-src.follows                    = "rust-analyzer-src";
 
-    jikyuu.url                                                  = "github:Nate-Wilkins/jikyuu/1.0.1";
+    jikyuu.url                                                  = "github:Nate-Wilkins/jikyuu/2.0.4";
     jikyuu.inputs.systems.follows                               = "systems";
     jikyuu.inputs.nixpkgs.follows                               = "nixpkgs";
     jikyuu.inputs.flake-utils.follows                           = "flake-utils";

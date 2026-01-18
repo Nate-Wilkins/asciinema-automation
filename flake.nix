@@ -10,22 +10,16 @@
     flake-utils.url                                           = "github:numtide/flake-utils";
     flake-utils.inputs.systems.follows                        = "systems";
 
-    jikyuu.url                                                = "github:Nate-Wilkins/jikyuu/1.0.1";
-    jikyuu.inputs.systems.follows                             = "systems";
-    jikyuu.inputs.nixpkgs.follows                             = "nixpkgs";
-    jikyuu.inputs.flake-utils.follows                         = "flake-utils";
-    jikyuu.inputs.fenix.follows                               = "fenix";
+    # task-documentation.url                                    = "gitlab:ox_os/task-documentation/3.0.1";
+    # task-documentation.inputs.systems.follows                 = "systems";
+    # task-documentation.inputs.nixpkgs.follows                 = "nixpkgs";
+    # task-documentation.inputs.flake-utils.follows             = "flake-utils";
+    # task-documentation.inputs.gitignore.follows               = "gitignore";
+    # task-documentation.inputs.fenix.follows                   = "fenix";
+    # task-documentation.inputs.asciinema-automation.follows    = "";
+    # task-documentation.inputs.jikyuu.follows                  = "jikyuu";
 
-    task-documentation.url                                    = "gitlab:ox_os/task-documentation/3.0.1";
-    task-documentation.inputs.systems.follows                 = "systems";
-    task-documentation.inputs.nixpkgs.follows                 = "nixpkgs";
-    task-documentation.inputs.flake-utils.follows             = "flake-utils";
-    task-documentation.inputs.gitignore.follows               = "gitignore";
-    task-documentation.inputs.fenix.follows                   = "fenix";
-    task-documentation.inputs.asciinema-automation.follows    = "";
-    task-documentation.inputs.jikyuu.follows                  = "jikyuu";
-
-    task-runner.url                                           = "gitlab:ox_os/task-runner/1.0.0";
+    task-runner.url                                           = "gitlab:ox_os/task-runner/4.0.0";
     task-runner.inputs.systems.follows                        = "systems";
     task-runner.inputs.nixpkgs.follows                        = "nixpkgs";
     task-runner.inputs.flake-utils.follows                    = "flake-utils";
@@ -33,7 +27,7 @@
     task-runner.inputs.fenix.follows                          = "fenix";
     task-runner.inputs.asciinema-automation.follows           = "";
     task-runner.inputs.jikyuu.follows                         = "jikyuu";
-    task-runner.inputs.task-documentation.follows             = "task-documentation";
+    # task-runner.inputs.task-documentation.follows             = "task-documentation";
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Transatives
@@ -43,13 +37,20 @@
 
     fenix.url                                                 = "github:nix-community/fenix";
     fenix.inputs.nixpkgs.follows                              = "nixpkgs";
+
+    jikyuu.url                                                = "github:Nate-Wilkins/jikyuu/1.0.1";
+    jikyuu.inputs.systems.follows                             = "systems";
+    jikyuu.inputs.nixpkgs.follows                             = "nixpkgs";
+    jikyuu.inputs.flake-utils.follows                         = "flake-utils";
+    jikyuu.inputs.fenix.follows                               = "fenix";
+
   };
 
   outputs                                            = {
     nixpkgs,
     flake-utils,
     task-runner,
-    task-documentation,
+    # task-documentation,
     ...
   }:
     let
@@ -61,7 +62,7 @@
             //
             # Custom Packages.
             {
-              task-documentation                    = task-documentation.defaultPackage."${system}";
+              # task-documentation                    = task-documentation.defaultPackage."${system}";
             }
           );
 

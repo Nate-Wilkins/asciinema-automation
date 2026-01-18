@@ -115,7 +115,6 @@
         "jikyuu": "jikyuu",
         "nixpkgs": "nixpkgs",
         "systems": "systems",
-        "task-documentation": "task-documentation",
         "task-runner": "task-runner"
       }
     },
@@ -148,43 +147,6 @@
       },
       "parent": []
     },
-    "task-documentation": {
-      "inputs": {
-        "asciinema-automation": [],
-        "fenix": [
-          "fenix"
-        ],
-        "flake-utils": [
-          "flake-utils"
-        ],
-        "gitignore": [
-          "gitignore"
-        ],
-        "jikyuu": [
-          "jikyuu"
-        ],
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "systems": [
-          "systems"
-        ]
-      },
-      "locked": {
-        "lastModified": 1712048513,
-        "narHash": "sha256-bzcvokxgyUVl8wQXYwMucEHaoQ3Ggn1v/H3Jg4jWN6Q=",
-        "owner": "ox_os",
-        "repo": "task-documentation",
-        "rev": "6599a10dc3c7ab168e100c8b33b7252735a3b15d",
-        "type": "gitlab"
-      },
-      "original": {
-        "owner": "ox_os",
-        "ref": "3.0.1",
-        "repo": "task-documentation",
-        "type": "gitlab"
-      }
-    },
     "task-runner": {
       "inputs": {
         "asciinema-automation": [],
@@ -205,22 +167,19 @@
         ],
         "systems": [
           "systems"
-        ],
-        "task-documentation": [
-          "task-documentation"
         ]
       },
       "locked": {
-        "lastModified": 1712048872,
-        "narHash": "sha256-AAUN8XddIra40z1/sL4FYN5002oTCcZO6piwTuCly4k=",
+        "lastModified": 1768698508,
+        "narHash": "sha256-Ypxj8hFblmDRSKmgIXrVMc1dKGyYfd+2J8PbV6k8DEk=",
         "owner": "ox_os",
         "repo": "task-runner",
-        "rev": "7c668f942bea8fcb2493a73c6df525f77ddf8501",
+        "rev": "f450d609f8d22125807e051e635127d1fcb5c1fe",
         "type": "gitlab"
       },
       "original": {
         "owner": "ox_os",
-        "ref": "1.0.0",
+        "ref": "4.0.0",
         "repo": "task-runner",
         "type": "gitlab"
       }

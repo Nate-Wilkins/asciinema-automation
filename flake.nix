@@ -32,11 +32,11 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Transatives
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-    gitignore.url                                             = "github:hercules-ci/gitignore.nix";
-    gitignore.inputs.nixpkgs.follows                          = "nixpkgs";
+    # gitignore.url                                             = "github:hercules-ci/gitignore.nix";
+    # gitignore.inputs.nixpkgs.follows                          = "nixpkgs";
 
-    rust-analyzer-src.url                                     = "github:rust-lang/rust-analyzer/nightly";
-    rust-analyzer-src.flake                                   = false;
+    # rust-analyzer-src.url                                     = "github:rust-lang/rust-analyzer/nightly";
+    # rust-analyzer-src.flake                                   = false;
 
     # fenix.url                                                 = "github:nix-community/fenix";
     # fenix.inputs.nixpkgs.follows                              = "nixpkgs";
@@ -48,7 +48,6 @@
     # jikyuu.inputs.flake-utils.follows                         = "flake-utils";
     # jikyuu.inputs.fenix.follows                               = "fenix";
     # jikyuu.inputs.jikyuu.follows                              = "jikyuu";
-
   };
 
   outputs                                            = {

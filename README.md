@@ -47,11 +47,11 @@ python -m pip install asciinema-automation
 
 | Author  | Estimated Hours |
 | ------------- | ------------- |
-| Pierre Marchand | <p align="right">19.92 Hours</p> |
-| Puneeth Chaganti | <p align="right">1 Hours</p> |
-| Sven Rebhan | <p align="right">0 Hours</p> |
-| Olivier Cervello | <p align="right">0 Hours</p> |
-| [![nate-wilkins](https://github.com/nate-wilkins.png?size=64)](https://github.com/nate-wilkins) | <p align="right">0 Hours</p> |
+| [![Pierre Marchand](https://github.com/Pierre Marchand.png?size=64)](https://github.com/Pierre Marchand) | <p align="right">19.92 Hours</p> |
+| [![nate-wilkins](https://github.com/nate-wilkins.png?size=64)](https://github.com/nate-wilkins) | <p align="right">5.25 Hours</p> |
+| [![Puneeth Chaganti](https://github.com/Puneeth Chaganti.png?size=64)](https://github.com/Puneeth Chaganti) | <p align="right">1 Hours</p> |
+| [![Sven Rebhan](https://github.com/Sven Rebhan.png?size=64)](https://github.com/Sven Rebhan) | <p align="right">0 Hours</p> |
+| [![Olivier Cervello](https://github.com/Olivier Cervello.png?size=64)](https://github.com/Olivier Cervello) | <p align="right">0 Hours</p> |
 
 ## External Resources
 

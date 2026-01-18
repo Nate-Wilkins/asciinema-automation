@@ -114,8 +114,7 @@
         "gitignore": "gitignore",
         "jikyuu": "jikyuu",
         "nixpkgs": "nixpkgs",
-        "systems": "systems",
-        "task-runner": "task-runner"
+        "systems": "systems"
       }
     },
     "rust-analyzer-src": {
@@ -146,43 +145,6 @@
         "type": "path"
       },
       "parent": []
-    },
-    "task-runner": {
-      "inputs": {
-        "asciinema-automation": [],
-        "fenix": [
-          "fenix"
-        ],
-        "flake-utils": [
-          "flake-utils"
-        ],
-        "gitignore": [
-          "gitignore"
-        ],
-        "jikyuu": [
-          "jikyuu"
-        ],
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "systems": [
-          "systems"
-        ]
-      },
-      "locked": {
-        "lastModified": 1768698508,
-        "narHash": "sha256-Ypxj8hFblmDRSKmgIXrVMc1dKGyYfd+2J8PbV6k8DEk=",
-        "owner": "ox_os",
-        "repo": "task-runner",
-        "rev": "f450d609f8d22125807e051e635127d1fcb5c1fe",
-        "type": "gitlab"
-      },
-      "original": {
-        "owner": "ox_os",
-        "ref": "4.0.0",
-        "repo": "task-runner",
-        "type": "gitlab"
-      }
     }
   },
   "root": "root",

@@ -19,14 +19,14 @@
     # task-documentation.inputs.asciinema-automation.follows    = "";
     # task-documentation.inputs.jikyuu.follows                  = "jikyuu";
 
-    task-runner.url                                           = "gitlab:ox_os/task-runner/4.0.0";
-    task-runner.inputs.systems.follows                        = "systems";
-    task-runner.inputs.nixpkgs.follows                        = "nixpkgs";
-    task-runner.inputs.flake-utils.follows                    = "flake-utils";
-    task-runner.inputs.gitignore.follows                      = "gitignore";
-    task-runner.inputs.fenix.follows                          = "fenix";
-    task-runner.inputs.asciinema-automation.follows           = "";
-    task-runner.inputs.jikyuu.follows                         = "jikyuu";
+    # task-runner.url                                           = "gitlab:ox_os/task-runner/4.0.0";
+    # task-runner.inputs.systems.follows                        = "systems";
+    # task-runner.inputs.nixpkgs.follows                        = "nixpkgs";
+    # task-runner.inputs.flake-utils.follows                    = "flake-utils";
+    # task-runner.inputs.gitignore.follows                      = "gitignore";
+    # task-runner.inputs.fenix.follows                          = "fenix";
+    # task-runner.inputs.asciinema-automation.follows           = "";
+    # task-runner.inputs.jikyuu.follows                         = "jikyuu";
     # task-runner.inputs.task-documentation.follows             = "task-documentation";
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -49,7 +49,7 @@
   outputs                                            = {
     nixpkgs,
     flake-utils,
-    task-runner,
+    # task-runner,
     # task-documentation,
     ...
   }:
@@ -94,7 +94,7 @@
           devShells.default                          = import ./shell/default.nix (
             environment
           // {
-            taskRunner                               = task-runner.taskRunner.${system};
+            # taskRunner                               = task-runner.taskRunner.${system};
           });
         }
       )

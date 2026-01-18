@@ -42,12 +42,20 @@
     # fenix.inputs.nixpkgs.follows                              = "nixpkgs";
     # fenix.inputs.rust-analyzer-src.follows                    = "rust-analyzer-src";
 
-    # jikyuu.url                                                = "github:Nate-Wilkins/jikyuu/1.0.1";
-    # jikyuu.inputs.systems.follows                             = "systems";
-    # jikyuu.inputs.nixpkgs.follows                             = "nixpkgs";
-    # jikyuu.inputs.flake-utils.follows                         = "flake-utils";
-    # jikyuu.inputs.fenix.follows                               = "fenix";
-    # jikyuu.inputs.jikyuu.follows                              = "jikyuu";
+    fenix.url                                                 = "github:nix-community/fenix";
+    fenix.inputs.nixpkgs.follows                              = "nixpkgs";
+    fenix.inputs.rust-analyzer-src.follows                    = "rust-analyzer-src";
+
+    jikyuu.url                                                  = "github:Nate-Wilkins/jikyuu/1.0.1";
+    jikyuu.inputs.systems.follows                               = "systems";
+    jikyuu.inputs.nixpkgs.follows                               = "nixpkgs";
+    jikyuu.inputs.flake-utils.follows                           = "flake-utils";
+    jikyuu.inputs.fenix.follows                                 = "fenix";
+    jikyuu.inputs.rust-analyzer-src.follows                     = "rust-analyzer-src";
+    jikyuu.inputs.asciinema-automation.follows                  = "";
+
+    rust-analyzer-src.url                                       = "github:rust-lang/rust-analyzer/nightly";
+    rust-analyzer-src.flake                                     = false;
   };
 
   outputs                                            = {

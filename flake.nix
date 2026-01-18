@@ -10,7 +10,6 @@
     flake-utils.url                                           = "github:numtide/flake-utils";
     flake-utils.inputs.systems.follows                        = "systems";
 
-
     task-documentation.url                                    = "gitlab:ox_os/task-documentation/5.0.2";
     task-documentation.inputs.systems.follows                 = "systems";
     task-documentation.inputs.nixpkgs.follows                 = "nixpkgs";
